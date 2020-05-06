@@ -1,3 +1,4 @@
+package br.edu.cesmac.si.noticia.model;
 
 public class PlanoDeSaude {
 	

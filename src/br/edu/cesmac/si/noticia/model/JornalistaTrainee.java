@@ -1,4 +1,6 @@
-public class JornalistaTrainee extends Jornalista {
+package br.edu.cesmac.si.noticia.model;
+
+public class JornalistaTrainee extends JornalistaAbstract {
 
 	private double valeAlimentacao;
 
@@ -24,7 +26,7 @@ public class JornalistaTrainee extends Jornalista {
 		System.out.println(valeAlimentacao);
 	}
 
-	void mostrarDados(char ornamento) {
+	public void mostrarDados(char ornamento) {
 		System.out.println(String.valueOf(ornamento).repeat(50));
 		super.mostrarDados();
 		System.out.println(valeAlimentacao);

@@ -1,12 +1,13 @@
+package br.edu.cesmac.si.noticia.model;
 
-public class JornalistaProfissional extends Jornalista {
+public class Jornalista extends JornalistaAbstract {
 	
 	protected PlanoDeSaude planoDeSaude;
 
-	public JornalistaProfissional() {
+	public Jornalista() {
 	}
 	
-	public JornalistaProfissional(String nome, String email, double salario, PlanoDeSaude planoDeSaude) {
+	public Jornalista(String nome, String email, double salario, PlanoDeSaude planoDeSaude) {
 		super(nome, email, salario);
 		this.planoDeSaude = planoDeSaude;
 	}

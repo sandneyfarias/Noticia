@@ -1,13 +1,15 @@
-public abstract class Jornalista {
+package br.edu.cesmac.si.noticia.model;
+
+public abstract class JornalistaAbstract {
 	
 	protected String nome;
 	protected String email;
 	protected double salario;
 
-	public Jornalista() {
+	public JornalistaAbstract() {
 	}
 
-	public Jornalista(String nome, String email, double salario) {
+	public JornalistaAbstract(String nome, String email, double salario) {
 		this.nome = nome;
 		this.email = email;
 		this.salario = salario;

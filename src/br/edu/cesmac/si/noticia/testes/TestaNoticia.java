@@ -1,7 +1,13 @@
+package br.edu.cesmac.si.noticia.testes;
+
+import br.edu.cesmac.si.noticia.model.Jornalista;
+import br.edu.cesmac.si.noticia.model.JornalistaTrainee;
+import br.edu.cesmac.si.noticia.model.Noticia;
+
 public class TestaNoticia {
 
     public static void main(String[] args) {
-        JornalistaProfissional j1 = new JornalistaProfissional();
+        Jornalista j1 = new Jornalista();
         j1.setNome("Cid Bobeira");
 
         Noticia n1 = new Noticia();

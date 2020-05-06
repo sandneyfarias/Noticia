@@ -1,3 +1,6 @@
+package br.edu.cesmac.si.noticia.testes;
+
+import br.edu.cesmac.si.noticia.model.Noticia;
 
 public class TestaConstrutor {
 

@@ -1,8 +1,10 @@
+package br.edu.cesmac.si.noticia.model;
+
 public class Noticia {
 	private String titulo;
 	private String resumo;
 	private String texto;
-	private Jornalista jornalista;
+	private JornalistaAbstract jornalista;
 
 	public Noticia() {
 		System.out.println("A notícia foi criada");
@@ -32,11 +34,11 @@ public class Noticia {
 		this.texto = texto;
 	}
 
-	public Jornalista getJornalista() {
+	public JornalistaAbstract getJornalista() {
 		return jornalista;
 	}
 
-	public void setJornalista(Jornalista jornalista) {
+	public void setJornalista(JornalistaAbstract jornalista) {
 		this.jornalista = jornalista;
 	}
 
