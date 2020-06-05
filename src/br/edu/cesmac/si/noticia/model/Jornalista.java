@@ -31,7 +31,11 @@ public class Jornalista extends JornalistaAbstract {
 	@Override
 	public void mostrarDados() {
 		super.mostrarDados();
-		System.out.println(this.planoDeSaude.getNome());
+		if (this.planoDeSaude != null) {
+			System.out.println(this.planoDeSaude.getNome());
+		}
 	}	
+	
+	
 
 }

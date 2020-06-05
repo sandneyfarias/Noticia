@@ -1,13 +1,34 @@
 package br.edu.cesmac.si.noticia.model;
 
-public class Noticia {
+import br.edu.cesmac.si.noticia.exception.JornalistaNuloException;
+
+public class Noticia implements Comparable<Noticia> {
 	private String titulo;
 	private String resumo;
 	private String texto;
 	private JornalistaAbstract jornalista;
+	private Editoria editoria;
+
+	@Override
+	public int compareTo(Noticia noticia) {
+		return this.getTitulo().compareTo(noticia.getTitulo());
+	}
 
 	public Noticia() {
-		System.out.println("A notícia foi criada");
+
+	}
+
+	public Noticia(Jornalista jornalista, Editoria editoria) {
+		if (jornalista == null) {
+			throw new JornalistaNuloException("Jornalista não pode ser nulo");
+		}
+
+		if (editoria == null) {
+			throw new JornalistaNuloException("Editoria não pode ser nula");
+		}
+
+		this.jornalista = jornalista;
+		this.editoria = editoria;
 	}
 
 	public String getTitulo() {
@@ -46,13 +67,24 @@ public class Noticia {
 		return jornalista != null;
 	}
 
-	void mostrarDados() {
+	public Editoria getEditoria() {
+		return editoria;
+	}
+
+	public void setEditoria(Editoria editoria) {
+		this.editoria = editoria;
+	}
+
+	public void mostrarDados() {
 		System.out.println("-------Notícia-------");
 		System.out.println(titulo);
-		System.out.println(resumo);
-		System.out.println(texto);
-		if (temJornalista()) {
-			jornalista.mostrarDados();
-		}
+		/*
+		 * System.out.println(resumo); System.out.println(texto);
+		 * 
+		 * System.out.println(editoria.getNome());
+		 */
+		/*
+		 * if (temJornalista()) { jornalista.mostrarDados(); }
+		 */
 	}
 }
