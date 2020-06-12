@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public abstract class JornalistaAbstract {
 
+	protected Long idJornalista;
 	protected String nome;
 	protected String email;
 	protected double salario;
@@ -18,6 +19,14 @@ public abstract class JornalistaAbstract {
 		this.nome = nome;
 		this.email = email;
 		this.salario = salario;
+	}
+
+	public Long getIdJornalista() {
+		return idJornalista;
+	}
+
+	public void setIdJornalista(Long idJornalista) {
+		this.idJornalista = idJornalista;
 	}
 
 	public String getNome() {
